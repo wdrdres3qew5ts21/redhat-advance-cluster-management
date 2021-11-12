@@ -35,7 +35,7 @@ metadata:
   name: etherpad
   namespace: etherpad
   annotations:
-    apps.open-cluster-management.io/git-path: resources/etherpad
+    apps.open-cluster-management.io/git-path: gitops
   labels:
     app: etherpad
     app.kubernetes.io/part-of: etherpad
