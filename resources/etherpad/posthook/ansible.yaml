@@ -1,0 +1,20 @@
+apiVersion: tower.ansible.com/v1alpha1
+kind: AnsibleJob
+metadata:
+  name: post-message
+  namespace: etherpad
+spec:
+  tower_auth_secret: toweraccess
+  job_template_name: update_wordpress
+  # extra_vars:
+  #   cost: 6.88
+  #   ghosts: ["inky","pinky","clyde","sue"]
+  #   is_enable: true
+  #   other_variable: foo
+  #   pacman: mrs
+  #   size: 8
+  #   targets_list:
+  #   - aaa
+  #   - bbb
+  #   - ccc
+  #   version: 1.23.45

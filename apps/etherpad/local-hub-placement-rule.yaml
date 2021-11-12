@@ -1,0 +1,25 @@
+apiVersion: cluster.open-cluster-management.io/v1alpha1
+kind: Placement
+metadata:
+  name: asia-cluster
+  namespace: openshift-gitops
+spec:
+  clusterSets:
+    - asia-cluster
+  
+---
+apiVersion: apps.open-cluster-management.io/v1alpha1
+kind: GitOpsCluster
+metadata:
+  name: gitops-cluster-sample
+  namespace: openshift-gitops
+spec:
+  argoServer:
+    cluster: local-cluster
+    argoNamespace: openshift-gitops
+  placementRef:
+    kind: Placement
+    apiVersion: cluster.open-cluster-management.io/v1alpha1
+    name: asia-cluster
+
+#oc delete -f apps/etherpad/local-hub-placement-rule.yaml

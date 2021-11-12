@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: 'etherpad-argo-remote'
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/wdrdres3qew5ts21/rhacm-labs.git'
+    path: resources/etherpad
+    targetRevision: HEAD
+    directory:
+      recurse: true
+      jsonnet: {}
+  destination:
+    name: azure-kubernetes-smart-city-edge-th
+    # server: 'https://kubernetes.default.svc'
+    namespace: etherpad
+  syncPolicy: {}
