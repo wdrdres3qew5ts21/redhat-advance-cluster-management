@@ -1,15 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: 'etherpad-argo-remote'
+  name: etherpad-argo-remote
 spec:
-  project: default
-  source:
-    repoURL: 'https://github.com/wdrdres3qew5ts21/redhat-advance-cluster-management.git'
-    path: resources/etherpad
-    targetRevision: HEAD
   destination:
     name: azure-kubernetes-smart-city-edge-th
-    # server: 'https://kubernetes.default.svc'
     namespace: etherpad
-  syncPolicy: {}
+    server: ''
+  source:
+    path: resources/etherpad
+    repoURL: 'https://github.com/wdrdres3qew5ts21/redhat-advance-cluster-management.git'
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
