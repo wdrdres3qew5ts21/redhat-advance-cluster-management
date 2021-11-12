@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: etherpad-argo-remote
-  namespace: etherpad
+  namespace: openshift-gitops
 spec:
   destination:
     name: azure-kubernetes-smart-city-edge-th
