@@ -5,7 +5,7 @@ metadata:
   namespace: etherpad
 spec:
   tower_auth_secret: toweraccess
-  job_template_name: update_wordpress
+  job_template_name: demo_message
   # extra_vars:
   #   cost: 6.88
   #   ghosts: ["inky","pinky","clyde","sue"]
