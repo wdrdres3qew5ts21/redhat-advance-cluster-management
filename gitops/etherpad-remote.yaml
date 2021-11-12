@@ -8,9 +8,6 @@ spec:
     repoURL: 'https://github.com/wdrdres3qew5ts21/redhat-advance-cluster-management.git'
     path: resources/etherpad
     targetRevision: HEAD
-    directory:
-      recurse: true
-      jsonnet: {}
   destination:
     name: azure-kubernetes-smart-city-edge-th
     # server: 'https://kubernetes.default.svc'
