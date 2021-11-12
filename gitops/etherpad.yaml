@@ -5,7 +5,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/wdrdres3qew5ts21/rhacm-labs.git'
+    repoURL: 'https://github.com/wdrdres3qew5ts21/redhat-advance-cluster-management.git'
     path: resources/etherpad
     targetRevision: HEAD
     directory:
