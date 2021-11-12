@@ -1,7 +1,7 @@
 apiVersion: app.k8s.io/v1beta1
 kind: Application
 metadata:
-  name: etherpad-nextgen
+  name: etherpad
   namespace: etherpad
   # annotations:
   #   apps.open-cluster-management.io/deployables: ''
