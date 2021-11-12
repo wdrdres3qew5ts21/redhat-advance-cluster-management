@@ -1,7 +1,7 @@
 apiVersion: app.k8s.io/v1beta1
 kind: Application
 metadata:
-  name: etherpad
+  name: etherpad-nextgen
   namespace: openshift-gitops
   # annotations:
   #   apps.open-cluster-management.io/deployables: ''
@@ -25,7 +25,7 @@ metadata:
   name: etherpad-latest
   namespace: openshift-gitops
 spec:
-  pathname: https://github.com/wdrdres3qew5ts21/rhacm-labs.git
+  pathname: https://github.com/wdrdres3qew5ts21/redhat-advance-cluster-management.git
   type: GitHub
 
 ---
@@ -36,11 +36,13 @@ metadata:
   namespace: openshift-gitops
   annotations:
     apps.open-cluster-management.io/git-path: gitops
+    apps.open-cluster-management.io/git-branch: main
   labels:
     app: etherpad
     app.kubernetes.io/part-of: etherpad
+    
 spec:
-  channel: etherpad/etherpad-latest
+  channel: openshift-gitops/etherpad-latest
   # Credentials ที่เรา Setup ไปก่อนหน้าและอยู่ที่ Namespace Etherpad
   hooksecretref:
     name: toweraccess
