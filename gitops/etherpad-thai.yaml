@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: etherpad-argo
+  namespace: openshift-gitops
+spec:
+  destination:
+    name: azure-kubernetes-smart-city-edge-th
+    namespace: etherpad
+    server: ''
+  source:
+    path: resources/etherpad
+    repoURL: 'https://github.com/wdrdres3qew5ts21/redhat-advance-cluster-management.git'
+    targetRevision: HEAD
+    directory:
+      recurse: true
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
